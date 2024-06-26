@@ -36,17 +36,12 @@ public class TravelInsertController {
 		int cnt = -1;
 		cnt = travelDao.insertTravel(travel);
 		
-		if(cnt > 0){
-			// kim 팀원 : 추가
-			// kim 팀원 : 추가
-			// kim 팀원 : 추가
-			
-			return gotoPage;
-		}
-		else {// 삽입 실패 시, 삽입 폼으로 이동
+		// kim branch 삭제
+		
+		// 삽입 실패 시, 삽입 폼으로 이동
 			
 			return "redirect:" + command  ; 
-		}
+		
 		
 	}
 }
