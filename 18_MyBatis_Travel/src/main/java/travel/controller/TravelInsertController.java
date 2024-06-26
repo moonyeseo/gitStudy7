@@ -31,14 +31,16 @@ public class TravelInsertController {
 	@RequestMapping(value = command, method = RequestMethod.POST)
 	public String doAction(@ModelAttribute("travel") @Valid TravelBean travel, BindingResult result, Model model) {
 		
-		if(result.hasErrors()) {
-			return getPage;
-		}
+		// kim 팀원 : 삭제 
 		
 		int cnt = -1;
 		cnt = travelDao.insertTravel(travel);
 		
 		if(cnt > 0){
+			// kim 팀원 : 추가
+			// kim 팀원 : 추가
+			// kim 팀원 : 추가
+			
 			return gotoPage;
 		}
 		else {// 삽입 실패 시, 삽입 폼으로 이동
